@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style></style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="parent">
+        <div class="left">
+            <div class="left__parent">
+                <form action="">
+                <h1>Login</h1>
+                <p>Email Address</p>
+                    <input type="email" id="email" placeholder="Masukan email yang sudah didaftar">
+                <p>Kata sandi</p>
+                <input type="password" id="password" placeholder="Kata sandi yang sudah didaftar">
+                <br>
+            <button type="submit">Login</button>
+        </form>
+        </div>
+        </div>
+
+        <img src="./img/bg.svg" alt="">
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const loginForm = document.getElementById("loginForm");
+            
+            loginForm.addEventListener("submit", function(event) {
+                event.preventDefault(); 
+                const email = document.getElementById("email").value;
+                const password = document.getElementById("password").value;
+
+                console.log("Email:", email);
+                console.log("Password:", password);
+            });
+        });
+    </script>
+</body>
+</html>
